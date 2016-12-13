@@ -38,27 +38,46 @@ class EnigmaTest < MiniTest::Test
 
     def test_is_the_map_an_array
         legend = CharacterMap.new
-        assert_equal Array, legend.map.class
+        assert_equal Hash, legend.map.class
     end
 
     def test_does_the_map_contain_lower_alphabet
         legend = CharacterMap.new
-        assert true, legend.map.include?('a'..'z')
+        assert true, legend.map.has_key?('a'..'z')
     end
 
     def test_does_the_map_contain_all_whole_numbers
         legend = CharacterMap.new
-        assert true, legend.map.include?('0'..'9')
+        assert true, legend.map.has_key?('0'..'9')
     end
 
     def test_does_the_map_contain_upper_alphabet
         legend = CharacterMap.new
-        assert true, legend.map.include?('A'..'Z')
-    end
-    
-    def test_does_the_map_contain_space
-        legend = CharacterMap.new
-        assert true, legend.map.include?(' ')
+        assert true, legend.map.has_key?('A'..'Z')
     end
 
+    def test_does_the_map_output_index_of_letter
+        legend = CharacterMap.new
+        assert_equal 0, legend.map['a']
+    end
+
+    def test_does_the_keyring_contain_four_numbers
+        keys = Rotation.new
+        assert true, keys.keyring.count == 4
+    end
+
+    def test_is_it_a_rotation
+        rotation = Rotation.new
+        assert_equal Rotation, rotation.class
+    end
+
+    def test_is_the_rotation_an_array
+        turn = Rotation.new
+        assert_equal Array, turn.rotation.class
+    end
+
+    def test_does_the_rotation_have_four_displacement_values
+        turn = Rotation.new
+        assert = 4, turn.rotation.count
+    end
 end

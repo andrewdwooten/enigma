@@ -1,13 +1,14 @@
 class Key
-    attr_accessor :key
+	attr_accessor :key
 
-    def initialize
+  def initialize
      
-    end
+  end
 
-    def key
-        key = []
-        5.times {key << rand(9)}
-        @key = key
-    end
+  def key
+    key = []
+    5.times {key << rand(9)}
+    @key = key
+  end
+	
 end

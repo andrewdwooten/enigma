@@ -1,5 +1,5 @@
 class Key
-	attr_accessor :key
+  attr_accessor :key
 
   def initialize
      

@@ -1,8 +1,8 @@
 class Offset
-	require 'date'
+  require 'date'
   attr_accessor :offset
 
-	def initialize
+  def initialize
         
   end
 

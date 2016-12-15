@@ -5,7 +5,7 @@ require './lib/CharacterMap.rb'
 class Enigma
   attr_accessor :turn, :base_map, :e
 
-	def initialize
+  def initialize
     @base_map = CharacterMap.new 
     @turn = Rotation.new
   end

@@ -56,9 +56,10 @@ class EnigmaTest < MiniTest::Test
         assert true, legend.map.has_key?('A'..'Z')
     end
 
-    def test_does_the_map_output_index_of_letter
+    def test_does_the_map_output_value_nil_in_untranslated_map
         legend = CharacterMap.new
-        assert_equal 0, legend.map['a']
+        assert_equal nil, legend.map.key('a')
+        #binding.pry
     end
 
     def test_does_the_keyring_contain_four_numbers
@@ -79,5 +80,10 @@ class EnigmaTest < MiniTest::Test
     def test_does_the_rotation_have_four_displacement_values
         turn = Rotation.new
         assert = 4, turn.rotation.count
+    end
+
+    def test_does_encrypt_encrypt
+        message = 'frog'
+        assert_equal 'htqi', message.encrypt
     end
 end

@@ -31,6 +31,7 @@ class CharacterMap
         base = [*('a'..'z'), *('A'..'Z'), *('0'..'9')]
         @map = Hash.new
         base.each.with_index {|x,i| @map.store(x,i) }
+        #binding.pry
     end
 end
 
@@ -66,6 +67,7 @@ class Enigma
     end
 
     def encrypt
+    
     end
 
 end

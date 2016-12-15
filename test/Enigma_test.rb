@@ -51,7 +51,6 @@ end
   end
 
   def test_crack_the_known_ending
-  skip
     enemy = Enigma.new
     ending = "..end.."
     enemy_message = enemy.encrypt(ending)
@@ -60,7 +59,6 @@ end
   end
 
   def test_crack_word_with_known_ending
-  skip
     enemy = Enigma.new
     message = "awesome sauce ..end.."
     enemy_message = enemy.encrypt(message)

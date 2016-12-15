@@ -3,7 +3,7 @@ require './lib/CharacterMap.rb'
 
 
 class Enigma
-  attr_accessor :enemy_message, :cracked, :turn, :base_map, :e
+  attr_accessor :turn, :base_map, :e
 
 	def initialize
     @base_map = CharacterMap.new 
@@ -55,6 +55,5 @@ class Enigma
         cracked = e.decrypt(enemy_message[-7,7])
     end  
       solved = @e.decrypt(enemy_message)
-			binding.pry
 	end
 end
